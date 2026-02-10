@@ -26,9 +26,10 @@ A high-fidelity Retrieval-Augmented Generation (RAG) application designed to onb
 Ensure you have [Ollama](https://ollama.com/) installed and running.
 
 ### 2. Prepare Local Models
-Open your terminal and pull the required embedding model:
+Open your terminal and pull the required embedding model and serve:
 ```
 ollama pull nomic-embed-text
+ollama serve
 ```
 ### 3. Setup Environment
 Clone the repository and install dependencies:
@@ -51,3 +52,10 @@ Start the Ollama server if it isn't running (ollama serve), then launch the UI:
 ```bash
 streamlit run main.py
 ```
+
+### 5. Project Structure
+* main.py: Application entry point and Streamlit configuration.
+* assistant.py: The core logic for RAG and conversation chains.
+* gui.py: Streamlit rendering logic and chat interface management.
+* prompts.py: System instructions and UI copy.
+* data/: Contains the company policy PDF and employee data generators.
